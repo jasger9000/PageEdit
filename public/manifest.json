@@ -1,0 +1,19 @@
+{
+  "name": "Page Edit",
+  "descritption": "A small browser extension that lets you easily locally edit a website page",
+  "version": "1.0",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "permissions": [
+    "menus",
+    "activeTab"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "56.0a1"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
