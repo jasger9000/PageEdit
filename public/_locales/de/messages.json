@@ -1,0 +1,20 @@
+{
+	"menuPageEdit": {
+		"message": "$STATUS$ Seiteneditierung",
+		"descritption": "Titel des Page Edit Context Menü items",
+		"placeholders": {
+			"status": {
+				"content": "$1",
+				"example": "Aktiviere"
+			}
+		}
+	},
+	"statusTurnOn": {
+		"message": "Aktiviere",
+		"descritption": "Zeigt an, dass der Seitenbearbeitungsmodus im Kontextmenü aktiviert werden kann"
+	},
+	"statusTurnOff": {
+		"message": "Deaktiviere",
+		"descritption": "Zeigt an, dass der Seitenbearbeitungsmodus im Kontextmenü deaktiviert werden kann"
+	}
+}

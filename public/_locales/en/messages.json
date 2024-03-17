@@ -1,0 +1,20 @@
+{
+	"menuPageEdit": {
+		"message": "$STATUS$ page edit",
+		"descritption": "title of the Page edit context menu item item",
+		"placeholders": {
+			"status": {
+				"content": "$1",
+				"example": "Enable"
+			}
+		}
+	},
+	"statusTurnOn": {
+		"message": "Enable",
+		"description": "Indicates that page edit mode can be enabled in the context menu"
+	},
+	"statusTurnOff": {
+		"message": "Disable",
+		"description": "Indicates that page edit mode can be disabled in the context menu"
+	}
+}
