@@ -4,17 +4,21 @@
 	"description": "A small browser extension that lets you easily locally edit a website page",
 	"main": "index.js",
 	"scripts": {
-		"build": "webpack --config webpack.config.js"
+		"build": "webpack --config webpack.config.js",
+		"check": "pnpx @biomejs/biome check ./src",
+		"apply-check": "pnpx @biomejs/biome check --apply ./src"
 	},
 	"keywords": [],
 	"author": "jasger9000",
 	"license": "MIT",
 	"devDependencies": {
+		"@biomejs/biome": "^1.6.1",
+		"@types/firefox-webext-browser": "^120.0.3",
 		"copy-webpack-plugin": "^12.0.2",
 		"ts-loader": "^9.5.1",
 		"typescript": "^5.4.2",
 		"webpack": "^5.90.3",
 		"webpack-cli": "^5.1.4",
-		"@types/firefox-webext-browser": "^120.0.3"
+		"zip-webpack-plugin": "^4.0.1"
 	}
 }

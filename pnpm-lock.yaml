@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@biomejs/biome':
+    specifier: ^1.6.1
+    version: 1.6.1
   '@types/firefox-webext-browser':
     specifier: ^120.0.3
     version: 120.0.3
@@ -23,8 +26,99 @@ devDependencies:
   webpack-cli:
     specifier: ^5.1.4
     version: 5.1.4(webpack@5.90.3)
+  zip-webpack-plugin:
+    specifier: ^4.0.1
+    version: 4.0.1(webpack-sources@3.2.3)(webpack@5.90.3)
 
 packages:
+
+  /@biomejs/biome@1.6.1:
+    resolution: {integrity: sha512-SILQvA2S0XeaOuu1bivv6fQmMo7zMfr2xqDEN+Sz78pGbAKZnGmg0emsXjQWoBY/RVm9kPCgX+aGEpZZTYaM7w==}
+    engines: {node: '>=14.*'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@biomejs/cli-darwin-arm64': 1.6.1
+      '@biomejs/cli-darwin-x64': 1.6.1
+      '@biomejs/cli-linux-arm64': 1.6.1
+      '@biomejs/cli-linux-arm64-musl': 1.6.1
+      '@biomejs/cli-linux-x64': 1.6.1
+      '@biomejs/cli-linux-x64-musl': 1.6.1
+      '@biomejs/cli-win32-arm64': 1.6.1
+      '@biomejs/cli-win32-x64': 1.6.1
+    dev: true
+
+  /@biomejs/cli-darwin-arm64@1.6.1:
+    resolution: {integrity: sha512-KlvY00iB9T/vFi4m/GXxEyYkYnYy6aw06uapzUIIdiMMj7I/pmZu7CsZlzWdekVD0j+SsQbxdZMsb0wPhnRSsg==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-darwin-x64@1.6.1:
+    resolution: {integrity: sha512-jP4E8TXaQX5e3nvRJSzB+qicZrdIDCrjR0sSb1DaDTx4JPZH5WXq/BlTqAyWi3IijM+IYMjWqAAK4kOHsSCzxw==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-arm64-musl@1.6.1:
+    resolution: {integrity: sha512-YdkDgFecdHJg7PJxAMaZIixVWGB6St4yH08BHagO0fEhNNiY8cAKEVo2mcXlsnEiTMpeSEAY9VxLUrVT3IVxpw==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-arm64@1.6.1:
+    resolution: {integrity: sha512-nxD1UyX3bWSl/RSKlib/JsOmt+652/9yieogdSC/UTLgVCZYOF7u8L/LK7kAa0Y4nA8zSPavAQTgko7mHC2ObA==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-x64-musl@1.6.1:
+    resolution: {integrity: sha512-aSISIDmxq04NNy7tm4x9rBk2vH0ub2VDIE4outEmdC2LBtEJoINiphlZagx/FvjbsqUfygent9QUSn0oREnAXg==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-x64@1.6.1:
+    resolution: {integrity: sha512-BYAzenlMF3QdngjNFw9QVBXKGNzeecqwF3pwDgUGEvU7OJpn1/lyVkJVxYPtVGRNdjQ9e6l/s8NjKuBpW/ZR4Q==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-win32-arm64@1.6.1:
+    resolution: {integrity: sha512-/eCHQKZ1kEawUpkSuXq4urtxMsD1P1678OPG3zNKt3ru16AqqspLdO3jzBe3k74xCPYnQ36e9Yqc97Mo0qgPtg==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-win32-x64@1.6.1:
+    resolution: {integrity: sha512-5TUZbzBwnDLFxLVGEPsorNi6eC2Gt+z4Oei9Qvq0M/4c4/mjZ96ABgwao/tMxf4ZBr/qyy2YdvF+gX9Rc+xC0A==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@discoveryjs/json-ext@0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
@@ -360,6 +454,10 @@ packages:
       electron-to-chromium: 1.4.708
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
+    dev: true
+
+  /buffer-crc32@0.2.13:
+    resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
     dev: true
 
   /buffer-from@1.1.2:
@@ -1157,4 +1255,21 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+    dev: true
+
+  /yazl@2.5.1:
+    resolution: {integrity: sha512-phENi2PLiHnHb6QBVot+dJnaAZ0xosj7p3fWl+znIjBDlnMI2PsZCJZ306BPTFOaHf5qdDEI8x5qFrSOBN5vrw==}
+    dependencies:
+      buffer-crc32: 0.2.13
+    dev: true
+
+  /zip-webpack-plugin@4.0.1(webpack-sources@3.2.3)(webpack@5.90.3):
+    resolution: {integrity: sha512-G041Q4qUaog44Ynit6gs4o+o3JIv0WWfOLvc8Q3IxvPfuqd2KBHhpJWAXUB9Cm1JcWHTIOp9vS3oGMWa1p1Ehw==}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+      webpack-sources: '*'
+    dependencies:
+      webpack: 5.90.3(webpack-cli@5.1.4)
+      webpack-sources: 3.2.3
+      yazl: 2.5.1
     dev: true

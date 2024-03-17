@@ -1,6 +1,6 @@
 {
   "name": "Page Edit",
-  "descritption": "A small browser extension that lets you easily locally edit a website page",
+  "description": "A small browser extension that lets you easily locally edit a website page",
   "version": "1.0",
   "manifest_version": 2,
   "default_locale": "en",
@@ -10,6 +10,7 @@
   ],
   "browser_specific_settings": {
     "gecko": {
+	  "id": "pageedit@jasger9000.github.com",
       "strict_min_version": "56.0a1"
     }
   },
