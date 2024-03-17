@@ -1,0 +1,39 @@
+name: Build Webpack release
+
+on:
+  release:
+    types: 
+    - created
+    - edited
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'latest'
+
+    - name: Install dependencies
+      run: |
+        npm install -g pnpm
+        pnpm install
+
+    - name: Build
+      run: |
+        pnpm run build
+
+    - name: Upload packaged release
+      uses: actions/upload-release-asset@v1
+      with:
+        asset_path: dist/PageEdit.zip
+        asset_name: PageEdit.zip
+        asset_content_type: application/zip
+        upload_url: https://uploads.github.com/repos/${{ github.owner }}/releases/${{ github.ref }}/assets
+      env:
+        GITHUB_TOKEN: ${{ secrets.WEBPACK_TOKEN }}
